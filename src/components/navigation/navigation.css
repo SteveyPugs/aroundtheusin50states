@@ -1,0 +1,36 @@
+.nav-wrapper {
+  background-color: rgb(208, 208, 208);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position: absolute; */
+  position: sticky;
+  /* width: 100%; */
+  top: 0;
+}
+
+.nav-left {
+  padding: 10px 10px;
+  font-size: 1.75em;
+  letter-spacing: 8px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 0 2px black;
+}
+
+.nav-right {
+  display: flex;
+}
+
+.nav-item {
+  padding: 10px 10px;
+}
+
+.nav-item button {
+  padding: 10px 20px;
+  font-size: 0.85em;
+  background-color: rgb(114, 180, 250);
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
