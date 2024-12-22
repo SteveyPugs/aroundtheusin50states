@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 function States(props) {
   const [stateList, setStateList] = useState([...states]);
-  const { order, search } = props;
+  const { order, search, openModal } = props;
 
   useEffect(() => {
     let statesSorted = [...states];
@@ -42,7 +42,7 @@ function States(props) {
                 className="state-flag"
               />
               <p className="state-name">{state.name.toUpperCase()}</p>
-              <p className="state-status">
+              <p className="state-status" onClick={() => openModal(state.code)}>
                 Visited {state.visited ? "✅" : "❌"}{" "}
               </p>
             </div>
@@ -56,6 +56,7 @@ function States(props) {
 States.propTypes = {
   order: PropTypes.string.isRequired,
   search: PropTypes.string.isRequired,
+  openModal: PropTypes.func.isRequired,
 };
 
 export default States;
