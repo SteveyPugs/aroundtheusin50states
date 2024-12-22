@@ -4,9 +4,7 @@
   color: white;
   padding: 30px;
   align-items: stretch;
-  /* border: 1px solid white; */
   margin-bottom: 50px;
-  /* position: relative; */
 }
 
 .state-item {
@@ -20,11 +18,9 @@
 .state-flag {
   width: 100px;
   flex: 1;
-  /* border: 1px solid white; */
 }
 
 .state-wrapper {
-  /* border: 2px solid white; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,7 +29,6 @@
 
 .state-status {
   flex: 1;
-  /* border: 1px solid white; */
   margin: 10px;
   padding: 15px;
   background-color: white;
@@ -45,7 +40,6 @@
 
 .state-name {
   flex: 10;
-  /* border: 1px solid white; */
   margin: 10px;
   padding: 10px;
   color: #003049;
