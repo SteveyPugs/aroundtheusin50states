@@ -2,7 +2,10 @@
     {
         "code": "AL",
         "name": "Alabama",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "Gulf Shores"
+        ]
     },
     {
         "code": "AK",
@@ -22,7 +25,12 @@
     {
         "code": "CA",
         "name": "California",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "San Diego",
+            "Point Loma",
+            "La Jolla"
+        ]
     },
     {
         "code": "CO",
@@ -32,22 +40,37 @@
     {
         "code": "CT",
         "name": "Connecticut",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "New Haven"
+        ]
     },
     {
         "code": "DE",
         "name": "Delaware",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "New Castle"
+        ]
     },
     {
         "code": "FL",
         "name": "Florida",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "Orlando",
+            "Cape Canaveral",
+            "Jacksonville",
+            "Miami"
+        ]
     },
     {
         "code": "GA",
         "name": "Georgia",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "Savannah"
+        ]
     },
     {
         "code": "HI",
@@ -92,17 +115,27 @@
     {
         "code": "ME",
         "name": "Maine",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "Portland"
+        ]
     },
     {
         "code": "MD",
         "name": "Maryland",
-        "visited": false
+        "visited": true,
+        "locations": [
+            "Lusby",
+            "Solomons"
+        ]
     },
     {
         "code": "MA",
         "name": "Massachusetts",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "Cape Cod"
+        ]
     },
     {
         "code": "MI",
@@ -142,12 +175,23 @@
     {
         "code": "NH",
         "name": "New Hampshire",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "Conway"
+        ]
     },
     {
         "code": "NJ",
         "name": "New Jersey",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "Atlantic City",
+            "Brigantine",
+            "Ocean City",
+            "Margate",
+            "Cape May",
+            "Camdon"
+        ]
     },
     {
         "code": "NM",
@@ -157,12 +201,19 @@
     {
         "code": "NY",
         "name": "New York",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "Everywhere!"
+        ]
     },
     {
         "code": "NC",
         "name": "North Carolina",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "Charlotte",
+            "Asheville"
+        ]
     },
     {
         "code": "ND",
@@ -187,17 +238,26 @@
     {
         "code": "PA",
         "name": "Pennsylvania",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "Philadelphia"
+        ]
     },
     {
         "code": "RI",
         "name": "Rhode Island",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "Newport"
+        ]
     },
     {
         "code": "SC",
         "name": "South Carolina",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "Charleston"
+        ]
     },
     {
         "code": "SD",
@@ -207,7 +267,10 @@
     {
         "code": "TN",
         "name": "Tennessee",
-        "visited": true
+        "visited": true,
+        "locations": [
+            "Pigeon Forge"
+        ]
     },
     {
         "code": "TX",

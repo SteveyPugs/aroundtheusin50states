@@ -1,11 +1,14 @@
 import "./states.css";
 import states from "../../data/us-states.json";
 import PropTypes from "prop-types";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import StateContext from "../contexts/states/states";
 
 function States(props) {
+  const { setStateModal } = useContext(StateContext);
+
   const [stateList, setStateList] = useState([...states]);
-  const { order, search, openModal } = props;
+  const { order, search } = props;
 
   useEffect(() => {
     let statesSorted = [...states];
@@ -31,6 +34,16 @@ function States(props) {
     setStateList(statesSorted);
   }, [order, search]);
 
+  const openModal = (code) => {
+    const { name, locations } = states.find((s) => s.code === code);
+    setStateModal({
+      stateName: name,
+      stateVisits: locations,
+    });
+    const modal = document.getElementById("stateModal");
+    modal.style.display = "block";
+  };
+
   return (
     <div className="state-content">
       {stateList.map((state) => {
@@ -42,7 +55,10 @@ function States(props) {
                 className="state-flag"
               />
               <p className="state-name">{state.name.toUpperCase()}</p>
-              <p className="state-status" onClick={() => openModal(state.code)}>
+              <p
+                className="state-status"
+                onClick={state.visited ? () => openModal(state.code) : null}
+              >
                 Visited {state.visited ? "✅" : "❌"}{" "}
               </p>
             </div>
@@ -56,7 +72,6 @@ function States(props) {
 States.propTypes = {
   order: PropTypes.string.isRequired,
   search: PropTypes.string.isRequired,
-  openModal: PropTypes.func.isRequired,
 };
 
 export default States;
