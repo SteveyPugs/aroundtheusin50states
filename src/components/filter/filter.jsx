@@ -1,5 +1,5 @@
 import "./filter.css";
-import StateContext from "../contexts/states/states";
+import StateContext from "../../contexts/stateContext/stateContext";
 import { useContext } from "react";
 
 function Filter() {
