@@ -1,7 +1,7 @@
 import "./states.css";
 import states from "../../data/us-states.json";
 import { useState, useEffect, useContext } from "react";
-import StateContext from "../contexts/states/states";
+import StateContext from "../../contexts/stateContext/stateContext";
 
 function States() {
   const { pageState, setPageState } = useContext(StateContext);

@@ -1,5 +1,5 @@
 import { useContext, useRef, useEffect } from "react";
-import StateContext from "../../components/contexts/states/states";
+import StateContext from "../../../contexts/stateContext/stateContext";
 import "./stateModal.css";
 
 function StateModal() {
