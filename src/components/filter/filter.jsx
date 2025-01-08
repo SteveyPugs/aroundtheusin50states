@@ -1,47 +1,69 @@
-import PropTypes from "prop-types";
 import "./filter.css";
+import StateContext from "../contexts/states/states";
+import { useContext } from "react";
 
-function Filter(props) {
-  const { order, handleClick, handleSearch } = props;
+function Filter() {
+  const { pageState, setPageState } = useContext(StateContext);
+
+  const setSort = (sort) => {
+    setPageState((prevPageState) => {
+      return {
+        ...prevPageState,
+        sort,
+      };
+    });
+  };
+
+  const setSearch = (e) => {
+    const {
+      target: { value },
+    } = e;
+    setPageState((prevPageState) => {
+      return {
+        ...prevPageState,
+        searchText: value,
+      };
+    });
+  };
 
   return (
     <div className="toolbar">
       <div className="toolbar-btn-group">
         <button
-          onClick={() => handleClick("asc")}
+          onClick={() => setSort("asc")}
           className={`toolbar-btn ${
-            order === "asc" ? "toolbar-btn-selected" : ""
+            pageState.sort === "asc" ? "toolbar-btn-selected" : ""
           }`}
         >
           A to Z
         </button>
         <button
-          onClick={() => handleClick("desc")}
+          onClick={() => setSort("desc")}
           className={`toolbar-btn ${
-            order === "desc" ? "toolbar-btn-selected" : ""
+            pageState.sort === "desc" ? "toolbar-btn-selected" : ""
           }`}
         >
           Z to A
         </button>
         <button
-          onClick={() => handleClick("seen")}
+          onClick={() => setSort("seen")}
           className={`toolbar-btn ${
-            order === "seen" ? "toolbar-btn-selected" : ""
+            pageState.sort === "seen" ? "toolbar-btn-selected" : ""
           }`}
         >
           Visited
         </button>
         <button
-          onClick={() => handleClick("not")}
+          onClick={() => setSort("not")}
           className={`toolbar-btn ${
-            order === "not" ? "toolbar-btn-selected" : ""
+            pageState.sort === "not" ? "toolbar-btn-selected" : ""
           }`}
         >
           Non-Visited
         </button>
       </div>
       <input
-        onChange={(e) => handleSearch(e)}
+        onChange={(e) => setSearch(e)}
         className="toolbar-search"
         type="text"
         placeholder="Search..."
@@ -49,11 +71,5 @@ function Filter(props) {
     </div>
   );
 }
-
-Filter.propTypes = {
-  order: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired,
-  handleSearch: PropTypes.func.isRequired,
-};
 
 export default Filter;

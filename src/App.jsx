@@ -4,35 +4,26 @@ import Navigation from "./components/navigation/navigation";
 import States from "./components/content/states";
 import Filter from "./components/filter/filter";
 import StateContext from "../src/components/contexts/states/states";
-import StateModal from "../src/modals/state/state";
+import StateModal from "./modals/state/stateModal";
 
 function App() {
-  const [stateModal, setStateModal] = useState(null);
+  const [pageState, setPageState] = useState({
+    sort: "asc",
+    searchText: "",
+    currentStateModal: {
+      stateName: null,
+      stateVisits: [],
+    },
+  });
 
-  const [selectedOrder, setSelectedOrder] = useState("asc");
-  const [searchText, setSearchText] = useState("");
-  function setOrder(order) {
-    setSelectedOrder(order);
-  }
-  function setSearch(event) {
-    const {
-      target: { value },
-    } = event;
-    setSearchText(value);
-  }
-
-  const value = { stateModal, setStateModal };
+  const value = { pageState, setPageState };
 
   return (
     <>
       <Navigation />
-      <Filter
-        order={selectedOrder}
-        handleClick={setOrder}
-        handleSearch={setSearch}
-      />
       <StateContext.Provider value={value}>
-        <States order={selectedOrder} search={searchText} />
+        <Filter />
+        <States />
         <StateModal />
       </StateContext.Provider>
     </>

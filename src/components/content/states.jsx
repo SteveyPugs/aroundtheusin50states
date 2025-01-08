@@ -1,44 +1,47 @@
 import "./states.css";
 import states from "../../data/us-states.json";
-import PropTypes from "prop-types";
 import { useState, useEffect, useContext } from "react";
 import StateContext from "../contexts/states/states";
 
-function States(props) {
-  const { setStateModal } = useContext(StateContext);
+function States() {
+  const { pageState, setPageState } = useContext(StateContext);
 
   const [stateList, setStateList] = useState([...states]);
-  const { order, search } = props;
 
   useEffect(() => {
     let statesSorted = [...states];
-    if (search.length > 0) {
+    if (pageState?.searchText.length > 0) {
       statesSorted = statesSorted.filter((ss) =>
-        ss.name.toLowerCase().includes(search.toLowerCase())
+        ss.name.toLowerCase().includes(pageState.searchText.toLowerCase())
       );
     }
     statesSorted = statesSorted.sort((a, b) => {
-      if (order === "asc") {
+      if (pageState?.sort === "asc") {
         return a.name.localeCompare(b.name);
       }
-      if (order === "desc") {
+      if (pageState?.sort === "desc") {
         return b.name.localeCompare(a.name);
       }
-      if (order === "seen") {
+      if (pageState?.sort === "seen") {
         return Number(b.visited) - Number(a.visited);
       }
-      if (order === "not") {
+      if (pageState?.sort === "not") {
         return Number(a.visited) - Number(b.visited);
       }
     });
     setStateList(statesSorted);
-  }, [order, search]);
+  }, [pageState?.sort, pageState?.searchText]);
 
   const openModal = (code) => {
     const { name, locations } = states.find((s) => s.code === code);
-    setStateModal({
-      stateName: name,
-      stateVisits: locations,
+    setPageState((prevPageState) => {
+      return {
+        ...prevPageState,
+        currentStateModal: {
+          stateName: name,
+          stateVisits: locations,
+        },
+      };
     });
     const modal = document.getElementById("stateModal");
     modal.style.display = "block";
@@ -68,10 +71,5 @@ function States(props) {
     </div>
   );
 }
-
-States.propTypes = {
-  order: PropTypes.string.isRequired,
-  search: PropTypes.string.isRequired,
-};
 
 export default States;
