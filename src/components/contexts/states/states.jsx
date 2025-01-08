@@ -1,8 +1,8 @@
 import { createContext } from "react";
 
 const StateContext = createContext({
-  stateModal: null,
-  setStateModal: () => {},
+  pageState: null,
+  setPageState: () => {},
 });
 
 export default StateContext;
