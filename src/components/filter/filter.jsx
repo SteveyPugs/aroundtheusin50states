@@ -59,14 +59,14 @@ function Filter() {
             pageState.sort === "not" ? "toolbar-btn-selected" : ""
           }`}
         >
-          Non-Visited
+          Coming Soon
         </button>
       </div>
       <input
         onChange={(e) => setSearch(e)}
         className="toolbar-search"
         type="text"
-        placeholder="Search..."
+        placeholder="Search for a state"
       />
     </div>
   );
