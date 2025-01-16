@@ -62,7 +62,7 @@ function States() {
                 className="state-status"
                 onClick={state.visited ? () => openModal(state.code) : null}
               >
-                Visited {state.visited ? "✅" : "❌"}{" "}
+                {state.visited ? "Visited" : "Coming Soon"}
               </p>
             </div>
           </div>
