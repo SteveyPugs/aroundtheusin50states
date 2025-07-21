@@ -33,13 +33,22 @@ function StateModal() {
     <div ref={divRef}>
       <div className="modal" id="stateModal">
         <div className="modal-header">
-          <div className="modal-header-title">
-            {pageState?.currentStateModal.stateName}
+          <div className="modal-header-content">
+            {pageState?.currentStateModal.stateCode && (
+              <img
+                src={`./us-flags/${pageState.currentStateModal.stateCode.toLowerCase()}.png`}
+                className="modal-flag"
+                alt={`${pageState.currentStateModal.stateName} flag`}
+              />
+            )}
+            <div className="modal-header-title">
+              {pageState?.currentStateModal.stateName}
+            </div>
           </div>
           <div onClick={closeModal}>❌</div>
         </div>
         <div className="modal-body">
-          Areas Visited: {pageState?.currentStateModal.stateVisits.join(", ")}
+          Areas Visited: {pageState?.currentStateModal.stateVisits.sort().join(", ")}
         </div>
       </div>
     </div>

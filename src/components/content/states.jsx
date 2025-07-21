@@ -40,6 +40,7 @@ function States() {
         currentStateModal: {
           stateName: name,
           stateVisits: locations,
+          stateCode: code,
         },
       };
     });
@@ -58,12 +59,14 @@ function States() {
                 className="state-flag"
               />
               <p className="state-name">{state.name.toUpperCase()}</p>
-              <p
+              <button
                 className="state-status"
+                data-visited={state.visited}
                 onClick={state.visited ? () => openModal(state.code) : null}
+                disabled={!state.visited}
               >
-                {state.visited ? "Visited" : "Coming Soon"}
-              </p>
+                {state.visited ? "✓ Visited" : "Coming Soon"}
+              </button>
             </div>
           </div>
         );

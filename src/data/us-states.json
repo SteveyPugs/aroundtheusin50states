@@ -275,7 +275,12 @@
     {
         "code": "TX",
         "name": "Texas",
-        "visited": false
+        "visited": true,
+        "locations": [
+            "Houston",
+            "San Antonio",
+            "Galveston"
+        ]
     },
     {
         "code": "UT",

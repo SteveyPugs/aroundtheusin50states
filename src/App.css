@@ -1,0 +1,11 @@
+.app-container {
+  min-height: 100vh;
+  background: inherit;
+}
+
+.main-content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  min-height: calc(100vh - 73px);
+  padding: 2rem 0;
+}

@@ -1,53 +1,99 @@
 .state-content {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  padding: 0 30px 0 30px;
-  align-items: stretch;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .state-item {
-  padding: 10px;
-  background-color: #e0e6ea;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  box-shadow: 2px -2px 2px #666666;
-  border-radius: 8px;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 1px solid var(--neutral-200);
+}
+
+.state-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 .state-flag {
-  width: 100px;
-  flex: 1;
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 3px solid var(--neutral-300);
+  background: white;
+  padding: 2px;
+  box-shadow: var(--shadow-md);
 }
 
 .state-wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.state-status {
-  flex: 1.5;
-  margin: 10px;
-  padding: 15px;
-  background-color: white;
-  color: #003049;
-  text-align: center;
-  border-radius: 10px;
-  font-size: 1.5rem;
-  font-family: "Shadows Into Light", serif;
-  box-shadow: 0px 0px 5px black;
-  letter-spacing: 0.2rem;
+  padding: 1.5rem;
+  gap: 1rem;
 }
 
 .state-name {
-  flex: 10;
-  margin: 10px;
-  padding: 10px;
-  color: #003049;
-  font-size: 1.25rem;
-  font-weight: bold;
+  flex: 1;
+  color: var(--neutral-800);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.state-status {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  white-space: nowrap;
+}
+
+.state-status[data-visited="true"] {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.state-status[data-visited="true"]:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.state-status[data-visited="false"] {
+  background-color: var(--neutral-200);
+  color: var(--neutral-600);
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .state-content {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .state-wrapper {
+    padding: 1rem;
+  }
+  
+  .state-flag {
+    width: 60px;
+    height: 40px;
+  }
+  
+  .state-name {
+    font-size: 1rem;
+  }
 }

@@ -1,37 +1,87 @@
 .nav-wrapper {
-  background-color: rgb(208, 208, 208);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid var(--neutral-200);
 }
 
 .nav-left {
-  padding: 10px 10px;
-  font-size: 1.75rem;
-  letter-spacing: 8px;
-  font-weight: 900;
-  color: rgb(84, 93, 103);
-  text-shadow: 0 0 4px whitesmoke;
-  /* @media only screen and (max-width: 425px) {
-    font-size: 1rem;
-  } */
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  font-weight: 800;
+  color: var(--primary-blue);
+  text-shadow: none;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .nav-right {
   display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  min-width: 80px;
+}
+
+.visited-count {
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 700;
+}
+
+.visited-percentage {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .nav-item {
-  padding: 10px 10px;
+  display: flex;
 }
 
 .nav-item button {
-  padding: 10px 20px;
-  font-size: 0.85em;
-  background-color: rgb(114, 180, 250);
-  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
+  color: white;
+  border-radius: var(--border-radius);
   border: none;
-  font-weight: bold;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-item button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper {
+    padding: 1rem;
+  }
+  
+  .nav-left {
+    letter-spacing: 1px;
+  }
 }
