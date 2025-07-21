@@ -57,6 +57,7 @@ function States() {
               <img
                 src={`./us-flags/${state.code.toLowerCase()}.png`}
                 className="state-flag"
+                alt={`${state.name} state flag`}
               />
               <p className="state-name">{state.name.toUpperCase()}</p>
               <button
