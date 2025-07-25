@@ -52,7 +52,12 @@ function States() {
     <div className="state-content">
       {stateList.map((state) => {
         return (
-          <div key={state.code} className="state-item">
+          <div 
+            key={state.code} 
+            className="state-item"
+            onClick={state.visited && !pageState?.currentStateModal?.stateCode ? () => openModal(state.code) : null}
+            style={{ cursor: state.visited && !pageState?.currentStateModal?.stateCode ? 'pointer' : 'default' }}
+          >
             <div className="state-wrapper">
               <img
                 src={`./us-flags/${state.code.toLowerCase()}.png`}
@@ -60,14 +65,12 @@ function States() {
                 alt={`${state.name} state flag`}
               />
               <p className="state-name">{state.name.toUpperCase()}</p>
-              <button
+              <div
                 className="state-status"
                 data-visited={state.visited}
-                onClick={state.visited ? () => openModal(state.code) : null}
-                disabled={!state.visited}
               >
                 {state.visited ? "✓ Visited" : "Coming Soon"}
-              </button>
+              </div>
             </div>
           </div>
         );

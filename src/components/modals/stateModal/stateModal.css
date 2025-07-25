@@ -95,8 +95,8 @@
 
 @media (max-width: 768px) {
   .modal {
-    width: 95vw;
-    margin: 1rem;
+    width: calc(100vw - 2rem);
+    max-width: calc(100vw - 2rem);
   }
   
   .modal-header {

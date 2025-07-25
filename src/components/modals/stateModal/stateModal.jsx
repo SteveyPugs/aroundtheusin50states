@@ -3,11 +3,18 @@ import StateContext from "../../../contexts/stateContext/stateContext";
 import "./stateModal.css";
 
 function StateModal() {
-  const { pageState } = useContext(StateContext);
+  const { pageState, setPageState } = useContext(StateContext);
 
   function closeModal() {
     const modal = document.getElementById("stateModal");
     modal.style.display = "none";
+    setPageState((prevPageState) => ({
+      ...prevPageState,
+      currentStateModal: {
+        stateName: null,
+        stateVisits: [],
+      },
+    }));
   }
   const useClickOutside = (callback) => {
     const ref = useRef(null);
