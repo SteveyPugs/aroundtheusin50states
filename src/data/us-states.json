@@ -140,7 +140,11 @@
     {
         "code": "MI",
         "name": "Michigan",
-        "visited": false
+        "visited": true,
+        "locations": [
+            "Detriot",
+            "Mackinac Island"
+        ]
     },
     {
         "code": "MN",
@@ -223,7 +227,11 @@
     {
         "code": "OH",
         "name": "Ohio",
-        "visited": false
+        "visited": true,
+        "locations": [
+            "Canton",
+            "Cleveland"
+        ]
     },
     {
         "code": "OK",
