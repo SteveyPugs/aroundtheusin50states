@@ -149,7 +149,10 @@
     {
         "code": "MN",
         "name": "Minnesota",
-        "visited": false
+        "visited": true,
+        "locations": [
+            "Minneapolis, St. Paul"
+        ]
     },
     {
         "code": "MS",
