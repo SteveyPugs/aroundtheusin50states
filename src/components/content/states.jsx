@@ -23,10 +23,10 @@ function States() {
         return b.name.localeCompare(a.name);
       }
       if (pageState?.sort === "seen") {
-        return Number(b.visited) - Number(a.visited);
+        return Number(b.locations?.length > 0) - Number(a.locations?.length > 0);
       }
       if (pageState?.sort === "not") {
-        return Number(a.visited) - Number(b.visited);
+        return Number(a.locations?.length > 0) - Number(b.locations?.length > 0);
       }
     });
     setStateList(statesSorted);
@@ -55,8 +55,8 @@ function States() {
           <div 
             key={state.code} 
             className="state-item"
-            onClick={state.visited && !pageState?.currentStateModal?.stateCode ? () => openModal(state.code) : null}
-            style={{ cursor: state.visited && !pageState?.currentStateModal?.stateCode ? 'pointer' : 'default' }}
+            onClick={state.locations?.length > 0 && !pageState?.currentStateModal?.stateCode ? () => openModal(state.code) : null}
+            style={{ cursor: state.locations?.length > 0 && !pageState?.currentStateModal?.stateCode ? 'pointer' : 'default' }}
           >
             <div className="state-wrapper">
               <img
@@ -67,9 +67,9 @@ function States() {
               <p className="state-name">{state.name.toUpperCase()}</p>
               <div
                 className="state-status"
-                data-visited={state.visited}
+                data-visited={state.locations?.length > 0}
               >
-                {state.visited ? "✓ Visited" : "Coming Soon"}
+                {state.locations?.length > 0 ? "✓ Visited" : "Coming Soon"}
               </div>
             </div>
           </div>

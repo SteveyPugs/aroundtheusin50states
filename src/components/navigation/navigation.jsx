@@ -2,7 +2,7 @@ import "./navigation.css";
 import states from "../../data/us-states.json";
 
 function Navigation() {
-  const visitedCount = states.filter(state => state.visited).length;
+  const visitedCount = states.filter(state => state.locations?.length > 0).length;
   const totalCount = states.length;
   const percentage = Math.round((visitedCount / totalCount) * 100);
 

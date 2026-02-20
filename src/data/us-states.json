@@ -2,30 +2,25 @@
     {
         "code": "AL",
         "name": "Alabama",
-        "visited": true,
         "locations": [
             "Gulf Shores"
         ]
     },
     {
         "code": "AK",
-        "name": "Alaska",
-        "visited": false
+        "name": "Alaska"
     },
     {
         "code": "AZ",
-        "name": "Arizona",
-        "visited": false
+        "name": "Arizona"
     },
     {
         "code": "AR",
-        "name": "Arkansas",
-        "visited": false
+        "name": "Arkansas"
     },
     {
         "code": "CA",
         "name": "California",
-        "visited": true,
         "locations": [
             "San Diego",
             "Point Loma",
@@ -34,13 +29,11 @@
     },
     {
         "code": "CO",
-        "name": "Colorado",
-        "visited": false
+        "name": "Colorado"
     },
     {
         "code": "CT",
         "name": "Connecticut",
-        "visited": true,
         "locations": [
             "New Haven"
         ]
@@ -48,7 +41,6 @@
     {
         "code": "DE",
         "name": "Delaware",
-        "visited": true,
         "locations": [
             "New Castle"
         ]
@@ -56,7 +48,6 @@
     {
         "code": "FL",
         "name": "Florida",
-        "visited": true,
         "locations": [
             "Orlando",
             "Cape Canaveral",
@@ -67,55 +58,45 @@
     {
         "code": "GA",
         "name": "Georgia",
-        "visited": true,
         "locations": [
             "Savannah"
         ]
     },
     {
         "code": "HI",
-        "name": "Hawaii",
-        "visited": false
+        "name": "Hawaii"
     },
     {
         "code": "ID",
-        "name": "Idaho",
-        "visited": false
+        "name": "Idaho"
     },
     {
         "code": "IL",
-        "name": "Illinois",
-        "visited": false
+        "name": "Illinois"
     },
     {
         "code": "IN",
-        "name": "Indiana",
-        "visited": false
+        "name": "Indiana"
     },
     {
         "code": "IA",
-        "name": "Iowa",
-        "visited": false
+        "name": "Iowa"
     },
     {
         "code": "KS",
-        "name": "Kansas",
-        "visited": false
+        "name": "Kansas"
     },
     {
         "code": "KY",
-        "name": "Kentucky",
-        "visited": false
+        "name": "Kentucky"
     },
     {
         "code": "LA",
-        "name": "Louisiana",
-        "visited": false
+        "name": "Louisiana"
     },
     {
         "code": "ME",
         "name": "Maine",
-        "visited": true,
         "locations": [
             "Portland"
         ]
@@ -123,7 +104,6 @@
     {
         "code": "MD",
         "name": "Maryland",
-        "visited": true,
         "locations": [
             "Lusby",
             "Solomons"
@@ -132,7 +112,6 @@
     {
         "code": "MA",
         "name": "Massachusetts",
-        "visited": true,
         "locations": [
             "Cape Cod"
         ]
@@ -140,7 +119,6 @@
     {
         "code": "MI",
         "name": "Michigan",
-        "visited": true,
         "locations": [
             "Detriot",
             "Mackinac Island"
@@ -149,40 +127,37 @@
     {
         "code": "MN",
         "name": "Minnesota",
-        "visited": true,
         "locations": [
             "Minneapolis, St. Paul"
         ]
     },
     {
         "code": "MS",
-        "name": "Mississippi",
-        "visited": false
+        "name": "Mississippi"
     },
     {
         "code": "MO",
-        "name": "Missouri",
-        "visited": false
+        "name": "Missouri"
     },
     {
         "code": "MT",
-        "name": "Montana",
-        "visited": false
+        "name": "Montana"
     },
     {
         "code": "NE",
-        "name": "Nebraska",
-        "visited": false
+        "name": "Nebraska"
     },
     {
         "code": "NV",
         "name": "Nevada",
-        "visited": false
+        "locations": [
+            "Las Vegas",
+            "Valley of Fire"
+        ]
     },
     {
         "code": "NH",
         "name": "New Hampshire",
-        "visited": true,
         "locations": [
             "Conway"
         ]
@@ -190,7 +165,6 @@
     {
         "code": "NJ",
         "name": "New Jersey",
-        "visited": true,
         "locations": [
             "Atlantic City",
             "Brigantine",
@@ -202,13 +176,11 @@
     },
     {
         "code": "NM",
-        "name": "New Mexico",
-        "visited": false
+        "name": "New Mexico"
     },
     {
         "code": "NY",
         "name": "New York",
-        "visited": true,
         "locations": [
             "Everywhere!"
         ]
@@ -216,7 +188,6 @@
     {
         "code": "NC",
         "name": "North Carolina",
-        "visited": true,
         "locations": [
             "Charlotte",
             "Asheville"
@@ -224,13 +195,11 @@
     },
     {
         "code": "ND",
-        "name": "North Dakota",
-        "visited": false
+        "name": "North Dakota"
     },
     {
         "code": "OH",
         "name": "Ohio",
-        "visited": true,
         "locations": [
             "Canton",
             "Cleveland"
@@ -238,18 +207,15 @@
     },
     {
         "code": "OK",
-        "name": "Oklahoma",
-        "visited": false
+        "name": "Oklahoma"
     },
     {
         "code": "OR",
-        "name": "Oregon",
-        "visited": false
+        "name": "Oregon"
     },
     {
         "code": "PA",
         "name": "Pennsylvania",
-        "visited": true,
         "locations": [
             "Philadelphia"
         ]
@@ -257,7 +223,6 @@
     {
         "code": "RI",
         "name": "Rhode Island",
-        "visited": true,
         "locations": [
             "Newport"
         ]
@@ -265,20 +230,17 @@
     {
         "code": "SC",
         "name": "South Carolina",
-        "visited": true,
         "locations": [
             "Charleston"
         ]
     },
     {
         "code": "SD",
-        "name": "South Dakota",
-        "visited": false
+        "name": "South Dakota"
     },
     {
         "code": "TN",
         "name": "Tennessee",
-        "visited": true,
         "locations": [
             "Pigeon Forge"
         ]
@@ -286,7 +248,6 @@
     {
         "code": "TX",
         "name": "Texas",
-        "visited": true,
         "locations": [
             "Houston",
             "San Antonio",
@@ -295,37 +256,30 @@
     },
     {
         "code": "UT",
-        "name": "Utah",
-        "visited": false
+        "name": "Utah"
     },
     {
         "code": "VT",
-        "name": "Vermont",
-        "visited": false
+        "name": "Vermont"
     },
     {
         "code": "VA",
-        "name": "Virginia",
-        "visited": false
+        "name": "Virginia"
     },
     {
         "code": "WA",
-        "name": "Washington",
-        "visited": false
+        "name": "Washington"
     },
     {
         "code": "WV",
-        "name": "West Virginia",
-        "visited": false
+        "name": "West Virginia"
     },
     {
         "code": "WI",
-        "name": "Wisconsin",
-        "visited": false
+        "name": "Wisconsin"
     },
     {
         "code": "WY",
-        "name": "Wyoming",
-        "visited": false
+        "name": "Wyoming"
     }
 ]
