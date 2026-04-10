@@ -260,7 +260,11 @@
     },
     {
         "code": "VT",
-        "name": "Vermont"
+        "name": "Vermont",
+        "locations": [
+            "Stowe",
+            "Burlington"
+        ]
     },
     {
         "code": "VA",
