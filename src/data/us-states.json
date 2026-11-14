@@ -268,7 +268,11 @@
     },
     {
         "code": "VA",
-        "name": "Virginia"
+        "name": "Virginia",
+        "locations": [
+            "Williamsburg",
+            "Yorktown"
+        ]
     },
     {
         "code": "WA",
